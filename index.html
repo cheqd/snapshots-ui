@@ -182,7 +182,7 @@ permissions and limitations under the License.
     };
 
     // Initialize S3 SDK and the moment library (for time formatting utilities)
-    var endpoint = 'ams3.digitaloceanspaces.com'
+    var endpoint = 'snapshots-files.cheqd.net'
     var s3 = new AWS.S3({ endpoint: endpoint });
     moment().format();
 
@@ -383,7 +383,6 @@ permissions and limitations under the License.
             // requests with a 'next marker' until we have all the objects.
             cb: function (err, data) {
                 if (err) {
-                    console.log("error")
                     console.log('Error: ' + JSON.stringify(err));
                     console.log('Error: ' + err.stack);
                     scope.stop = true;
